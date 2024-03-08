@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./app.js" defer></script>
+    <title>Love</title>
+</head>
+<body>
+    <div class="loading">
+        <div class="boxHeartImg">
+            <div class="heartItem item1">
+                <img src="./image/heart.png" alt="">
+            </div>
+            <div class="heartItem item2">
+                <img src="./image/heart.png" alt="">
+            </div>
+            <div class="heartItem item3">
+                <img src="./image/heart.png" alt="">
+            </div>
+        </div>
+        <div class="heartBox">
+            <div class="heart"></div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress"></div>
+            <div class="percent">100%</div>
+        </div>
+        <h2 class="textBox">
+            <span class="textLoad">loading love</span>
+            <span class="cricle1">.</span>
+            <span class="cricle2">.</span>
+            <span class="cricle3">.</span>
+        </h2>
+        <div class="buttonCLick">
+            <img src="./image/cursor.png" alt="">
+            <div class="button">
+                <p class="textBtn"></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    function detectMobileDevice() {
+        const userAgent = navigator.userAgent.toLowerCase();
+        const mobileKeywords = ['iphone', 'ipod', 'android', 'windows phone', 'blackberry', 'webos', 'iemobile', 'opera mini'];
+        
+        for (let keyword of mobileKeywords) {
+            if (userAgent.indexOf(keyword) !== -1) {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+
+    window.onload = function() {
+        if (detectMobileDevice()) {
+            alert('Vui lòng truy cập trang web này trên máy tính để có trải nghiệm tốt nhất.');
+        }
+    };
+</script>
+<script>
+    function playMusicAndRedirect() {
+        var music = new Audio('music/Beautiful in white  Shane Filan speed up_320kbps.mp3');
+        music.play();
+        setTimeout(function() {
+            window.location.href = 'love/love.html';
+        }, 1000); // Đợi 1 giây trước khi chuyển hướng
+    }
+</script>
+</html>
